@@ -11,6 +11,7 @@ testing out connecting to Notion's API from a GitHub CodeSpace
 - [testIntegration](https://www.notion.so/my-integrations/internal/1ecc528fbe9f4d91bb7be99adf1db577)
 
 ## To Do
-- [ ] Copy over basic integration code from testIntegration local project
+- [x] Copy over tI.sh from testIntegration local project
+- [ ] Copy environment variables from WSL on studio laptop into CodeSpace
 - [ ] Get testIntegration working!
 - [ ] Update testIntegration to pull a list of notion tasks from the jasonwoyak.notion.site Projects database
