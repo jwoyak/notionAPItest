@@ -1,4 +1,5 @@
-const { Client } = require("@notionhq/client")
+const { Client } = require(['@notionhq/client'], function (client) {
+});
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY })
 
