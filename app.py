@@ -4,12 +4,15 @@ import re
 app = Flask(__name__)
 
 def generate_sigil(statement):
-    # Clean the statement
+    # Create the statement variable list from the statement chars
     new_statement = ''.join(dict.fromkeys(statement).keys())
 
     ### Generate the sigil string ###
+    #
+    # --- Now to do the sigil formula (as per Spare, Carrol, etc) --- #
     # First make a new statement object
-    upper_statement = ''.join(c.upper() for c in new_statement)
+    # (join the statement chars into a new string var)
+    upper_statement = ''.join(c.lower() for c in new_statement)
 
     # Remove vowels
     cons_statement = re.sub(r'[AEIOU]', '', upper_statement, flags=re.IGNORECASE)
@@ -31,4 +34,4 @@ def index():
         sigil = generate_sigil(statement)
         return render_template('index.html', sigil=sigil)
     else:
-        return render_template('index.html', sigil="test")
+        return render_template('index.html', sigil="")
